@@ -1,6 +1,14 @@
 import { RuleSetRule } from "webpack"
 
 export const wpLoaders = (): RuleSetRule[] => {
+    const cssLoader = {
+        test: /\.s[ac]ss$/i,
+        use: [
+          "style-loader",
+          "css-loader",
+          "sass-loader",
+        ],
+      }
 
     const tsLoader = 
         {
@@ -11,5 +19,6 @@ export const wpLoaders = (): RuleSetRule[] => {
       
     return [
         tsLoader,
+        cssLoader,
     ]
 }
