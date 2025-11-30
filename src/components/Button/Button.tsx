@@ -1,5 +1,5 @@
-import './Button.scss'
+import * as cls from './Button.module.scss';
 
 export const Button = () => {
-    return <div className="button">Button</div>
+    return <div className={cls.btn}>Button</div>
 }

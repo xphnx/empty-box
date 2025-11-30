@@ -1,12 +1,13 @@
-import React, { StrictMode} from "react";
+import { StrictMode} from "react";
 import { createRoot } from "react-dom/client"; 
-import { Button } from "./components/Button/Button";
+import { App } from "./components/App/App";
+import './index.scss'
 
 const container = document.getElementById('root');
 const root = createRoot(container)
 
 root.render(
     <StrictMode>
-        <Button />
+        <App />
     </StrictMode>
 )

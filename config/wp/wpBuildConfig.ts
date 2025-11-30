@@ -20,7 +20,7 @@ export const wpBuildConfig = (options: BuildOptions): Configuration => {
             clean: true,
         },
         plugins: wpPlugins(options),
-        module: { rules: wpLoaders() },
+        module: { rules: wpLoaders(options) },
         resolve: wpResolvers(),
         devServer: wpDevServer(options),
         devtool: isDev ? 'inline-source-map' : undefined,
