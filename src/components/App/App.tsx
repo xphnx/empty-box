@@ -1,10 +1,14 @@
 import { Link, Routes, Route } from "react-router-dom"
-import * as cls from './App.module.scss'
 import { Suspense } from "react"
 import { AboutLazy, MainLazy } from "../../pages"
 
+import '../../styles/index.scss'
+import { useTheme } from "../../theme"
+
 export const App = () => {
-    return <div className={cls.app}>
+    const {theme, toggleTheme} = useTheme();
+
+    return <div className={`app ${theme}`}>
         <Link to="/">Main</Link>
         <Link to="/about">About</Link>
         <Suspense fallback="Loading...">
@@ -13,5 +17,6 @@ export const App = () => {
                 <Route path="/about" element={<AboutLazy />} />
             </Routes>
         </Suspense>
+        <button onClick={toggleTheme}>Theme</button>
     </div>
 }
