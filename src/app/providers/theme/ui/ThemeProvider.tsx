@@ -1,6 +1,6 @@
 import { FC, PropsWithChildren, useMemo, useState } from "react";
-import { LOCAL_STORAGE_THEME_KEY, ThemeContext } from "./ThemeContext"
-import { Theme } from "./types";
+import { LOCAL_STORAGE_THEME_KEY, ThemeContext } from "../lib/ThemeContext"
+import { Theme } from "../model/types";
 
 const defaultTheme = localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Theme || Theme.DARK;
 

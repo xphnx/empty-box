@@ -21,7 +21,7 @@ export const wpBuildConfig = (options: BuildOptions): Configuration => {
         },
         plugins: wpPlugins(options),
         module: { rules: wpLoaders(options) },
-        resolve: wpResolvers(),
+        resolve: wpResolvers(options),
         devServer: wpDevServer(options),
         devtool: isDev ? 'inline-source-map' : undefined,
     }

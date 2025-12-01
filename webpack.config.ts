@@ -9,6 +9,7 @@ export default (env: EnvOptions) => {
     entry: path.resolve(__dirname, 'src', 'index.tsx'),
     output: path.resolve(__dirname, 'dist'),
     html: path.resolve(__dirname, 'public', 'index.html'),
+    root: path.resolve(__dirname),
   }
 
   const mode = env.mode ?? 'development';
