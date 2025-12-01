@@ -9,9 +9,8 @@
     "moduleResolution": "bundler",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-    "baseUrl": "./src",
     "paths": {
-      "@*": ["*"]
+      "@*": ["./src/*"]
     }
   },
    "ts-node": {

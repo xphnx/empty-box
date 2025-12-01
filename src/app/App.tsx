@@ -1,11 +1,10 @@
-import { Link, Routes, Route } from "react-router-dom"
-import { Suspense } from "react"
+import { Link } from "react-router-dom"
 
-import { AboutLazy, MainLazy } from "@pages"
-import { useTheme } from "@app/providers/theme"
 import { classNames } from "@shared/lib"
 
-import '@app/styles/index.scss'
+import { useTheme } from "./providers/theme"
+import { AppRouter } from "./router"
+import './styles/index.scss'
 
 export const App = () => {
     const {theme, toggleTheme} = useTheme();
@@ -13,12 +12,7 @@ export const App = () => {
     return <div className={classNames({primaryClass: 'app', additionalClasses: [theme]})}>
         <Link to="/">Main</Link>
         <Link to="/about">About</Link>
-        <Suspense fallback="Loading...">
-            <Routes>
-                <Route path="/" element={<MainLazy />} />
-                <Route path="/about" element={<AboutLazy />} />
-            </Routes>
-        </Suspense>
+        <AppRouter />
         <button onClick={toggleTheme}>Theme</button>
     </div>
 }
