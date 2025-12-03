@@ -7,7 +7,7 @@ interface ClassNamesArgs {
 export const classNames = ({ primaryClass, mods = {}, additionalClasses}: ClassNamesArgs) => {
     return [
         primaryClass,
-        ...additionalClasses,
+        ...additionalClasses.filter(Boolean),
         Object.entries(mods).filter(([_, value]) => Boolean(value)).map(([key]) => key)
     ].join(' ')
 }

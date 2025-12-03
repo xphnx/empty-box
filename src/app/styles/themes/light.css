@@ -1,6 +1,7 @@
 .app.LIGHT {
     --bg-color: #E0E1DD;
+    --secondary-bg-color: #778DA9;
 
-    --primary-font-color: #0D1B2A;
-    --secondary-font-color: #415A77;
+    --primary-font-color: #415A77;
+    --secondary-font-color: #0D1B2A;
 }
